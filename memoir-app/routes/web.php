@@ -15,8 +15,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
+    Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
 
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');    
+    Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
 
 });
 
