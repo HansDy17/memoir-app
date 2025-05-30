@@ -15,6 +15,12 @@ class UserController extends Controller
         ]);
     }
 
+    public function create()
+    {
+        // Logic to show the user creation form
+        return Inertia::render('Users/Create');
+    }
+
     public function show($id)
     {
         // Logic to retrieve and display a specific user
